@@ -22,10 +22,16 @@ Do not forget to restart the node after installing.
 
 See `HexPluginTest.java` for using the API.
 
-    curl -XPOST '0:9200/_bulkhex'
+A HTTP request looks like
+
+    POST '0:9200/_bulkhex'
     {"index":{"_index":"test","_type":"test","_id":"1"}
     {"hex":"4AC3B67267","nothex":"Hello HTTP World"}
-
+    
+or something like
+    
+    curl -s -XPOST '0:9200/_bulkhex' --data-binary @bulk.json
+    
 The indexed document shows the base64 encoding of the decoded base16 text.
 
     {"hex":"SsO2cmc=","nothex":"Hello HTTP World"}
