@@ -1,3 +1,5 @@
+:warning: **This repository will be removed soon without any further notice**
+
 # Hex bulk indexing plugin for Elasticsearch
 
 This plugin for Elasticsearch converts JSON hexadecimal encoding (base16) to binary data for Elasticsearch bulk indexing.
